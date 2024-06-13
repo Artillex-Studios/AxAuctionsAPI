@@ -5,13 +5,12 @@ import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class HookManager {
-    private static final ArrayList<CurrencyHook> currency = new ArrayList<>();
+    private static final HashMap<String, CurrencyHook> registry = new HashMap<>();
 
     public void setupHooks() {
-        updateHooks();
     }
 
     public void updateHooks() {
@@ -21,9 +20,8 @@ public class HookManager {
     public static void registerCurrencyHook(@NotNull Plugin plugin, @NotNull CurrencyHook currencyHook) {
     }
 
-    @NotNull
-    public static ArrayList<CurrencyHook> getCurrency() {
-        return currency;
+    public static HashMap<String, CurrencyHook> getRegistry() {
+        return registry;
     }
 
     @Nullable

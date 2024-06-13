@@ -14,7 +14,7 @@ public class AuctionUser {
     private final int userId;
     private final Player player;
     private Sorting sorting = Sorting.NEW_FIRST;
-    private int currency = HookManager.getCurrency().size();
+    private int currency = HookManager.getRegistry().size();
     private int extraLimit;
 
     public AuctionUser(@NotNull Player player) {
