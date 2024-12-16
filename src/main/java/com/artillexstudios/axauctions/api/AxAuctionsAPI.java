@@ -9,6 +9,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class AxAuctionsAPI {
 
@@ -24,7 +25,7 @@ public class AxAuctionsAPI {
         return new ArrayList<>(HookManager.getRegistry().values());
     }
 
-    public static HashMap<String, CurrencyHook> getRegistry() {
+    public static Map<String, CurrencyHook> getRegistry() {
         return HookManager.getRegistry();
     }
 
